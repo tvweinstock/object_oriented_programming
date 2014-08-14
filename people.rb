@@ -9,38 +9,33 @@ class Person
 	end
 end
 
-class Student
+class Student < Person
 
 	def learn
 		puts "I get it!"
 	end
 end
 
-class Instructor
-	def initialize
-	end
+class Instructor < Person
 
 	def teach
 		puts "Everything in Ruby is an Object."		
 	end
 end
 
-
-
-# end #end of class Person
-
-instructor1 = Person.new("Chris")
+instructor1 = Instructor.new("Chris")
 instructor1.name = "Chris"
 instructor1.greeting
+instructor1.teach
 
 
-student1 = Person.new("Cristina")
+
+student1 = Student.new("Cristina")
 student1.name = "Cristina"
 student1.greeting
+student1.learn
 
 
-Instructor.new.teach
-Student.new.learn
 
 #calling the teach method on Student does not work because it in not defined within the Student Class.
 Student.new.teach
