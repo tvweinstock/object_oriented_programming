@@ -28,7 +28,7 @@ class Rover
 	end	
 
 	def move_position
-		puts "hey there"
+
 		case @direction
 		when 'W'
 			@x -= 1
@@ -70,8 +70,11 @@ class Rover
 end
 
 rover1 = Rover.new(1,2,'N')
-rover1.move("R")
+rover1.move("L,M,L,M,L,M,L,M,M")
 puts rover1.current_position
 
+rover2 = Rover.new(3,3,'E')
+rover2.move("M,M,R,M,M,R,M,R,R,M")
+puts rover2.current_position
 
 
