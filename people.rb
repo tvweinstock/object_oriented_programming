@@ -38,7 +38,7 @@ student1.learn
 
 
 #calling the teach method on Student does not work because it in not defined within the Student Class.
-Student.new.teach
+# Student.new.teach
 
 
 
